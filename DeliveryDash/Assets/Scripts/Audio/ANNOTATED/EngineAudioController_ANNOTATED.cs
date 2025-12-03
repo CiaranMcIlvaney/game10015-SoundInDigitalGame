@@ -9,7 +9,7 @@ public class EngineAudioController : MonoBehaviour
     public float minPitch=0.85f, maxPitch=1.35f, minVolume=0.15f, maxVolume=0.8f, speedForMax=6f;
     public KeyCode boostKey = KeyCode.LeftShift; public float boostFade=0.2f;
     Rigidbody2D rb;
-    void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         if (!engineBaseSource) engineBaseSource = gameObject.AddComponent<AudioSource>();

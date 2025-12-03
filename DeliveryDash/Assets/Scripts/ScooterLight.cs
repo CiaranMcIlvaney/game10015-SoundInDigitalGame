@@ -27,6 +27,10 @@ public class ScooterLight : MonoBehaviour
 
     private Transform beamTf;
 
+    // Add horn sound when lights turn on using spacebar - Added in By Ciaran McIlvaney
+    [Header("Audio")]
+    [SerializeField] private AudioCue hornCue;
+
     void Awake()
     {
         if (lightBeamRenderer) beamTf = lightBeamRenderer.transform;
@@ -39,6 +43,13 @@ public class ScooterLight : MonoBehaviour
         // Hold-to-activate: on only while key is held
         bool isOn = Input.GetKey(lightKey);
 
+        // This fires once when you press spacebar
+        bool justPressed = Input.GetKeyDown(lightKey);
+        if (justPressed && hornCue != null && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.Play2D(hornCue);
+        }
+        
         // Keep the cone in front of the scooter (local +X, +Y)
         beamTf.localPosition = new Vector3(frontOffset, lateralOffset, 0f);
 

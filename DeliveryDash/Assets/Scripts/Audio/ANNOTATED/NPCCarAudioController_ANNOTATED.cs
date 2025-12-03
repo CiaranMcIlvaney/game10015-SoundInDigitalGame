@@ -7,7 +7,7 @@ public class NPCCarAudioController : MonoBehaviour
     public float maxPanAtWorldUnits=8f, minVolume=0.2f, maxVolume=0.6f, maxAudibleDistance=25f;
     public AudioLowPassFilter lowPass; public float offscreenCutoff=1800f, onscreenCutoff=22000f;
     AudioSource src;
-    void Awake(){ src = GetComponent<AudioSource>(); src.loop=true; src.spatialBlend=0f; if (engineCue) AudioManager.Instance?.PlayLoopOn(engineCue, src, 0f); }
+    void Start(){ src = GetComponent<AudioSource>(); src.loop=true; src.spatialBlend=0f; if (engineCue) AudioManager.Instance?.PlayLoopOn(engineCue, src, 0f); }
     void Update()
     {
         if (!player) return; if (!mainCam) mainCam = Camera.main;

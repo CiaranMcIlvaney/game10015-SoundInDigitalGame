@@ -17,4 +17,4 @@ MonoBehaviour:
   loop: 1
   basePitch: 1
   randomSemitoneRange: 0
-  output: {fileID: 0}
+  output: {fileID: -7381979601581715504, guid: 8d7ea0ae5b586754dbb075a2a16977c1, type: 2}

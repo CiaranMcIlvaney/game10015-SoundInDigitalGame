@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 /// <summary>
@@ -16,6 +17,10 @@ public class DeliveryManager : MonoBehaviour
     [Header("State (read-only at runtime)")]
     [SerializeField] private int deliveries = 0;
 
+    // Add delivery success audio into this script - Added in By Ciaran McIlvaney
+    [Header("Audio")]
+    [SerializeField] private AudioCue deliveryCue;
+
     /// <summary>
     /// Call this from your trigger script (e.g., HomeZone) when the player presses Enter inside a home trigger.
     /// </summary>
@@ -26,6 +31,9 @@ public class DeliveryManager : MonoBehaviour
 
         // Points: +50 per delivery
         if (score) score.Add(50);
+
+        // Play success SFX
+        AudioManager.Instance.Play2D(deliveryCue);
 
         // Show a 5s confirmation message (auto-clears even if spammed)
         if (hud) hud.ShowMessage("Delivery made", 5f);

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CUE_UI_Hover
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 5ba1f3838dce77148b29e5756fb7d105, type: 3}
-  volume: 1
+  volume: 0
   loop: 0
   basePitch: 1
   randomSemitoneRange: 0
-  output: {fileID: 0}
+  output: {fileID: 858279504405203586, guid: 8d7ea0ae5b586754dbb075a2a16977c1, type: 2}
