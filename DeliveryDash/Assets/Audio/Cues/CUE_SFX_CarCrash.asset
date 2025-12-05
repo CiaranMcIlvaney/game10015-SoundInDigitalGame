@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CUE_SFX_CarCrash
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 9986016c733474d45b09c3ed0351e978, type: 3}
-  volume: 1
+  volume: 0.75
   loop: 0
   basePitch: 1
   randomSemitoneRange: 0
