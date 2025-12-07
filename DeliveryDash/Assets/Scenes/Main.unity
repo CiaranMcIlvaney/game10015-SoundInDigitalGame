@@ -409,6 +409,7 @@ GameObject:
   - component: {fileID: 103335152}
   - component: {fileID: 103335153}
   - component: {fileID: 103335154}
+  - component: {fileID: 103335155}
   m_Layer: 0
   m_Name: Systems
   m_TagString: Untagged
@@ -543,6 +544,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spill: {fileID: 103335153}
+--- !u!114 &103335155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103335148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375289ee2c66a3c499102b8995d8c197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 466600563}
+  totalTime: 60
+  timeLeft: 60
+  addDrumsHighAt: 30
+  addMelodicBAt: 20
+  fullBlastAt: 10
 --- !u!1 &125994043
 GameObject:
   m_ObjectHideFlags: 0
@@ -11118,6 +11137,70 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &466600561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 466600564}
+  - component: {fileID: 466600563}
+  - component: {fileID: 466600562}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &466600562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466600561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35190a777598ae44d813ee14cb66ce90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 466600563}
+--- !u!114 &466600563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466600561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b14b21e82e97543bf9836588668650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drumsLow: {fileID: 11400000, guid: b0c8ad89b8a977341b3bd0d2d748817f, type: 2}
+  drumsHigh: {fileID: 11400000, guid: 1f0b58adedbf6ea4ca28a6a75ea03c3a, type: 2}
+  melodicA: {fileID: 11400000, guid: cfa8a2d23a806d0498961bd0ef3f411d, type: 2}
+  melodicB: {fileID: 11400000, guid: bded83cc4bd5c694ebe94cdf1ecf1a5b, type: 2}
+  musicBus: {fileID: -1904927517556814404, guid: 8d7ea0ae5b586754dbb075a2a16977c1, type: 2}
+  fadeSeconds: 1
+--- !u!4 &466600564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466600561}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.7999697, y: 0.956969, z: -0.05742429}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &470212089
 GameObject:
   m_ObjectHideFlags: 0
@@ -29738,3 +29821,4 @@ SceneRoots:
   - {fileID: 1303817070}
   - {fileID: 1244898394}
   - {fileID: 1634826230}
+  - {fileID: 466600564}
